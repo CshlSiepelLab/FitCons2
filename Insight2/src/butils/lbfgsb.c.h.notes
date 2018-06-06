@@ -1,0 +1,27 @@
+Initialize 
+	gd
+	sbgnrm
+	stp
+
+	Where are surroundignvariabels initilized?
+		time1 lnscht, sbtime gdolddtd
+
+		replace spsiln calculateion with
+		cfloat 
+		DBL_EPSILON
+		
+		What are the actual FG_ classes...
+		
+		
+		FG_LN
+		FG_LNSRCH
+		NEW_X
+		FS_ST
+		STOP
+		CONVERGENCE:....
+		ABNORMAL
+		RESTART
+		
+ITERMAX
+Add verbvose loggign to opptimizer..
+Add error reporting...
