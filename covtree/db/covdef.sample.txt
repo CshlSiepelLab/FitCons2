@@ -1,0 +1,119 @@
+# covdef.v1.nextgen.txt
+# v1 is for cell types having physical data, and their associated physical data.
+# Comments start a line with the "#" character and can be placed anywhere.
+# 	blank lines end a data record, extra blank lines between records are ignored.
+#   
+# KeyWord:covset 
+#	SetName "DefDir."
+# 	annotations [list of covariate nemonics]
+# 	CTS  		[list of covariate nemonics]
+covset
+#Set01 "C:/Temp/t/covtree/covs/X-Annotations" "C:/Temp/t/covtree/covs/X-CTS"
+Set01 "/usr/projects/fitcons2/res/V1/X-Annotations" "/usr/projects/fitcons2/res/V1/X-CTS" 
+# Annotations have one virtual cell type "E999". The same E999 data is used for all cell types
+#annotations CDS Melt smRNA Splice TFBS
+# CTS - cell-type sensitive data classes have a different data set for each cell type
+#cts RNAseq Chrom DNASE WGBS
+
+
+# KeyWord:covariate 
+#	CovName CodShortDesc cts/annotation mono/poly Directory(/x fro abs x for rel to covset)
+covariate
+RNAseq "Rna-Seq Data" cts mono 1 "C-rnaseq"
+1 None		"No RNA-Seq Reads"
+2 Low		"Few RNA-Seq Reads"
+3 Med		"Med RNA-Seq reads"
+4 High		"Deep RNA-Seq reads"
+
+
+covariate
+Chrom "ChromHMM Chromatin Class" cts poly 2 "C-chrom"
+01 TssA 	"Active TranscriptionStart Site"
+02 PromU	"Upstream Promoter or TSS"
+03 PromD1	"Downstream Promoter or TSS with DNASE
+04 PromD2   "Downstream Promoter or TSS no DNASE"
+05 Tx5      "5 Prime end of transcribed region"
+06 Tx       "Strongly transcribed region"
+07 Tx3Pr    "3 Prime end of transcribed region"
+08 TcWk     "Weakly transcribed region"
+09 TxReg    "Transcription Regulatory"
+10 TxEnh5Pr
+11 TxEnh3Pr
+12 TxEnhW   "
+13 EnhA1    "Active Enhancer 1"
+14 EnhA2    "Active Enhancer 2"
+15 EnhAF    "Flanking an active enhancer"
+16 EnhW1    "Weak Enhancer 1"
+17 EnhW2    "Weak Enhancer 2"
+18 EnhAC    "Enhancer Acetylation Only"
+19 DNase    "DNase HS Only"
+20 ZNF-Rpt	"ZNF Genes and repeats"
+21 Het      "Hetrochromatin"
+22 PromP    "Poised Promoter"
+# 23  PromBiv - broad h3k27me containing narrow h3k3me - both active an repressive marks usually disjoint. Associated with weakly expressed TF genes.
+#  Pattern is common in ES and resolves as ESC's differentiate. doi:10.1016/j.cell.2006.02.041
+23 PromBiv 	"Bivalent Promoter"
+24 ReprPC   "Polycomb Repressed"
+25 Quies    "Quiescent or Low Signal"
+# Based on  H3K4me1, H3K4me2, H3K4me3, H3K9ac, H3K27ac, H4K20me1, H3K79me2, H3K36me3, H3K9me3, H3K27me3, H2A.Z, and DNase -  based on p-value signal track
+#http://egg2.wustl.edu/roadmap/data/byFileType/chromhmmSegmentations/ChmmModels/imputed12marks/jointModel/final/annotation_25_imputed12marks.txt
+#http://egg2.wustl.edu/roadmap/data/byFileType/chromhmmSegmentations/ChmmModels/imputed12marks/jointModel/final/Imputed12Marks_25_States.pdf
+
+
+covariate
+DNASE "DNase-I Hypersenstivity" cts mono 1 "C-dnase"
+1 None   	"No DNASE-I reads"
+2 Low    	"Weak DNASE-I reads"
+3 Med    	"Moderate DNASE-I HS"
+4 Hi     	"Strong DNASE-I HS"
+
+
+covariate
+WBGS "Whole genome bisulfide sequencing (CpG)" cts mono 1 "C-wgbs"
+1 HypoM-    "Not Hypomethylated, could be Hyper, Part or NULL"
+2 HypoM+    "Hypomethylated - evidence of transcription"
+
+
+covariate
+CDS "Gencodev19 CDS" annotation mono 1 "C-cds"
+1 NCD 		"Non coding"
+2 Phase2	"Third amino acid position, of 3"
+3 Phase0	"First amino acid position, of 3"
+4 Phase1	"Second amino acid position, of 3"
+5 StSplc	"Start Codon or last 2, 3-prime-genic positions before splice site"
+
+
+covariate
+Melt "DNA Melting Temperature" annotation poly 1 "C-melt"
+1 VLow		"VLow - Melt below X deg C"
+2 Low		"Low  - Melt between X and Y deg C"
+3 Med		"Med  - Melt between Y and Z deg C"
+4 High		"Hi   - Melt between Z and W deg C"
+5 VHigh		"VHi  - Melt above W deg C"
+
+
+covariate
+smRNA "Small RNA-seq (<200bp) signal" annotation mono 1 "C-smrna"
+1 None 		"Not in a binding Motiff, or very low information content."
+2 Low		"Weakly informative Motiff position."
+3 Medium	"Moderately informative Motiff position."
+4 High		"Highly informative Motiff position."
+
+
+covariate
+splice "RNA Splice sites - most informative to least" annotation mono 1 "C-splicing"
+1 None      "Not CDS splice-site proximal"
+2 Low       "Weakly conserved CDS splice site proximal"
+3 Medium    "Moderately conserved CDS splice site proximal"
+4 High      "Strongly conserved CDs splice-site proximal"
+
+
+covariate
+TFBS "Transcription Factor Binding-By information in Motiff position (ChipSeq+PWM)" annotation mono 1 "C-tfbs"
+1 TFBS- 	"Not in a TF binding Motiff, or very low information content."
+2 TFBS-L	"Weakly informative Motiff position."
+3 TFBS-M	"Moderately informative Motiff position."
+4 TFBS-H	"Highly informative Motiff position."
+
+
+end
