@@ -8,26 +8,26 @@ Selective pressure can be used as an indicator of the [potential for genomic fun
 ## Publication Checklist
 ### General	
 
- - Stand Alone Binary: Is available bin/Insight2.bz2
- - Database Needed to run the system: ADD LINK
+ - Stand Alone Binary: For linux is available in repository as FitCons2/Insight2/bin/Insight2.bz2
+ - Database needed to run Insight2: Download [here](http://nextgen.cshl.edu/~bgulko/research/Insight2/db/FitCons2/Insight2DB.tar), see installation instructions for use.
  - Demonstration test: in test, see XXXX for instructions
 
 ### System Requirements 
  - Software Dependencies
- -- Primary terget is Linux (RedHat Enterprise 6.6 or above x64) for demos and tests. gcc 4.9.2+ std=c++11
- -- Windows 7 & 10 (x64) have been used as well, and Visual C++ 2015 project files are included.
- -- Code is C++ and uses C++2011 features, but no C++2014 features.
- -- No external dependencies or libraries are required.
+   - Primary terget is Linux (RedHat Enterprise 6.6 or above x64) for demos and tests. gcc 4.9.2+ std=c++11
+   - Windows 7 & 10 (x64) have been used as well, and Visual C++ 2015 project files are included.
+   - Code is C++ and uses C++2011 features, but no C++2014 features.
+   - No external dependencies or libraries are required.
   - Tested on 
- -- Linux (RedHat Enterprise 6.6 & 6.9, x64) as well as Windows 7 & 10 x64
+    - Linux (RedHat Enterprise 6.6 & 6.9, x64) as well as Windows 7 & 10 x64
  - Hardware Requirements:
--- 64 bit architecture and operating system.
- -- 8GB+ of RAM is recommended, along with 10GB of free hard drive space
- -- Database requires approximately 3GB to load. A 32 bit build is possible, but not supported.
+   - 64 bit architecture and operating system.
+   - 8GB+ of RAM is recommended, along with 10GB of free hard drive space
+   - Database requires approximately 3GB to load. A 32 bit build is possible, but not supported.
 ### Installation Guide:
  - Instructions:
- -- Obtain and compile the [bedops](http://bedops.readthedocs.io/en/latest/index.html) package to obtain the [unstarch](http://bedops.readthedocs.io/en/latest/content/reference/file-management/compression/starch.html) decompression program 
- -- Download [Insight2 database](http://nextgen.cshl.edu/~bgulko/research/Insight2/db/FitCons2/Insight2DB.tar) (about 0.5GB) and expand files using unstarch and gunzip (expands to about 3.2GB) 
+   - Obtain and compile the [bedops](http://bedops.readthedocs.io/en/latest/index.html) package to obtain the [unstarch](http://bedops.readthedocs.io/en/latest/content/reference/file-management/compression/starch.html) decompression program 
+   - Download [Insight2 database](http://nextgen.cshl.edu/~bgulko/research/Insight2/db/FitCons2/Insight2DB.tar) (about 0.5GB) and expand files using unstarch and gunzip (expands to about 3.2GB) 
 `wget http://nextgen.cshl.edu/~bgulko/research/Insight2/db/FitCons2/Insight2DB.tar`
 `tar -xvf Insight2DB.tar`
 `gunzip Insight2DB/monoDB.db.gz`
@@ -35,15 +35,15 @@ Selective pressure can be used as an indicator of the [potential for genomic fun
 `unstarch Insight2DB/poly.bedg.starch > Insight2DB/poly.bedg`
 `unstarch Insight2DB/polyn.bedg.starch > Insight2DB/polyn.bedg`
 the Insight2 database directory (`didb`) is now **`FitCons2/Insight2/Insight2DB`**
- -- Clone the [FitCons2 GitHub repository](https://github.com/CshlSiepelLab/FitCons2), this contains the Insight2 code, about 10Mb.
+   - Clone the [FitCons2 GitHub repository](https://github.com/CshlSiepelLab/FitCons2), this contains the Insight2 code, about 10Mb.
  `git clone https://github.com/CshlSiepelLab/FitCons2.git`
--- Generate the executable.. 
+     - Decompress the pre-built executable.. 
   `  cd FitCons2/Insight2`
   `  bunzip2 bin/Insight2.bz2`
   `  chmod u+x bin/Insight2`,
-  or
+     - or, build the software using
  `make`
- -- No separate installation is needed, to view options type
+   - No separate installation is needed, to view options type
  `bin/Insight2`
  - Total install time: after download, <5 minutes.
 ### Demo
@@ -68,4 +68,3 @@ the Insight2 database directory (`didb`) is now **`FitCons2/Insight2/Insight2DB`
  - Link to repository: YYYY
  - Pseudocode: ZZZZ
 	
-
