@@ -195,5 +195,5 @@ Thu Jun  7 20:23:49 2018        Done.
     - Repository Base	https://github.com/CshlSiepelLab/FitCons2
     - Repository Detail https://github.com/CshlSiepelLab/FitCons2/tree/master/Insight2
     - Repository download link and command: `git clone https://github.com/CshlSiepelLab/FitCons2.git`
- - Pseudocode: *In Preparation*
+ - Pseudocode: see [Insight2/docs/Insight2_FunctionalOverview.pdf](https://github.com/CshlSiepelLab/FitCons2/blob/master/Insight2/docs/Insight2_FunctionalOverview.pdf)
 	
