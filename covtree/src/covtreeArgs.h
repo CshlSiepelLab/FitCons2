@@ -73,8 +73,11 @@ struct covtreeArgs {
 		v = 0;								// Default to no debugging
 		covStart="";						// special value, ignore nothing.
 		sCTS=""; vcts.clear();				// default is NO cts data.
-		spriors=""; 
-		vpriors.clear(); vpriors.resize(6);	// 4 blank priors?, use Insight2 default....
+		// reinstate these blank priors weh ner fix parrental values, in the mean time default to hg19 when no parrental priors are provided
+		//spriors=""; 
+		//vpriors.clear(); vpriors.resize(6);	// 4 blank priors?, use Insight2 default....
+		spriors="0.07342666985087427378,0.00021737936739721811,0.64058097515779444109,347,125851001.911685,125851025.131036";	// HG19 valeusfrom INSIGHT1 0.16e, etas is earlier value for expecation
+		vpriors.clear(); spriors.tokenize(vpriors, ","); vpriors.resize(6); for (auto &s : vpriors) s.trim();					// draw from arg processing code.....
 		fnOut="covtree.out";
 		extRecurse=0;						// use internal recursion only
 		minBits = 100000.0;					// Fairly conservative...

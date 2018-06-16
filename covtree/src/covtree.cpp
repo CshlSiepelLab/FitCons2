@@ -1,6 +1,6 @@
 // covtree.cpp : Defines the entry point for the console application.
 
-#define COVTREE_VER_STR "00.00.11" " (" __DATE__ " " __TIME__ ")"
+#define COVTREE_VER_STR "00.00.12" " (" __DATE__ " " __TIME__ ")"
 
 // 00.00.01 - 2016-08-23 0355 ET. Compiles, runs, and iterates. All the basics seem here. Time to committ to alpha
 // 00.00.02 - 2016-08-24 XXXX ET. Added linux compatible changes C++1y (2013 std). Added -restart option, fixed prior
@@ -21,6 +21,8 @@
 // 00.00.10 - 2016-09-28 Several very minor updates. Documentation.
 // 00.00.11 - 2016-12-20 Handeling of improper partitions (those where one coset has no genomic positions). Passing an empty bed file (or one identical to parent) to Insight2 can result in problems.
 //				Does NOT effect standard covaraites (V1-3), but does effect nested covarites such as celltype integration by covaraite-rho (V4).
+// 00.00.12 - 2018-06-15 Minor update. When no prioers are provided at the root node we get a crash because we can't idntify deifferneces in NLL withotu a parent NLL
+//				Workaround is to provide HG19 NLL as prior. Fix is to run INSIGHT2 on the parent (union of all positions) before testing splits. Draw prior from parent. Perhaps in 00.13...
 
 // system includes - C first, then C++
 #include <cassert>
@@ -240,7 +242,11 @@ int main(int argc, char **argv ) {
 			if (args.v >0) { std::cerr << "\n\n" << FmtSimple::strNow() << " Main: Got Arguments " << sarg << "\n"; }
 		}
 		try {
-			{ double d_zero=0.0; scorePair::ParentalRho( NULL, &d_zero ); };
+			{ 
+			// TODO: if we have no parental values (sometimes provided as priors) we should run INSIGHT2 on the parrental (universal) set, and then use ther results
+			// as priors... perhaos for 00.13. If we impliment this, remove default priors from covtreeArgs! --Brad
+
+			double d_zero=0.0; scorePair::ParentalRho( NULL, &d_zero ); };
 			// Genereate working subset
 			if (args.v > 0) { std::cerr << FmtSimple::strNow() << " Main: Initializing master covaraiteSet structure.\n"; }
 			covsetDefSubset covDefST;								// Master Subset, that is the subset defined by the user input
