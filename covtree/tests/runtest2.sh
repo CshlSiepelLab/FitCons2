@@ -51,7 +51,7 @@ fdb="${ddb}/covtree-test2-DB.tar"
 
 #furl='http://nextgen.cshl.edu/~bgulko/research/Insight2/db/FitCons2/Insight2DB.tar'
 #surl='http://nextgen.cshl.edu/~bgulko/research/covtree/db/FitCons2/1-test1-simple/1-test1-simple-db.tar'
-surl='http://nextgen.cshl.edu/~bgulko/research/covtree/db/FitCons2/2-test2-nonmonotonic/covtree-test2-DB.tar'
+surl='http://compgen.cshl.edu/~bgulko/research/covtree/db/FitCons2/2-test2-nonmonotonic/covtree-test2-DB.tar'
 
 if [[ -s "$fdb" ]]; then
   echo -e "`date` Found database archive $fdb . "
@@ -103,7 +103,7 @@ dref="${dt2}/ref"; mkdir -p "${dref}"
 fref="${dref}/covtree-test2-ref.tar"
 #surl='http://nextgen.cshl.edu/~bgulko/research/covtree/db/FitCons2/1-test1-simple/1-test1-simple-db.tar'
 #surl='http://nextgen.cshl.edu/~bgulko/research/covtree/db/FitCons2/1-test1-simple/1-test1-simple-ref.tar'
-surl='http://nextgen.cshl.edu/~bgulko/research/covtree/db/FitCons2/2-test2-nonmono/2-test2-nonmono-ref.tar'
+surl='http://compgen.cshl.edu/~bgulko/research/covtree/db/FitCons2/2-test2-nonmonotonic/covtree-test2-ref.tar'
 if [[ -s "$fref" ]]; then
   echo -e "`date` Found reference archive $fref . "
 else

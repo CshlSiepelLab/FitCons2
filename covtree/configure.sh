@@ -58,7 +58,7 @@ echo "`date` Fetching covtree master database. Compressed archive requires appro
 
 ddb="./db"; mkdir -p "${ddb}"; ddb=`readlink -f "${ddb}"`
 fdb="covtreeDB.full.tar"
-furl='http://nextgen.cshl.edu/~bgulko/research/covtree/db/FitCons2/3-full/covtreeDB.full.tar'
+furl='http://compgen.cshl.edu/~bgulko/research/covtree/db/FitCons2/3-full/covtreeDB.full.tar'
 
 if [[ "$sarg" == "clean" ]]; then
   echo -e "`date`\tClearing  database in ./db ."
