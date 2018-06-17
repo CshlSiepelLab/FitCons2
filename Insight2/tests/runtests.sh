@@ -63,7 +63,7 @@ echo -e "\t`date` Verifying input file $fin ."
 expandFile "${fin}.starch"
 
 echo -e "\t`date`\n\t${fbin}  ${fidb} -fin $fin -qmap -maxsampw 115  -rho 0.359788,1 -eta 0.788613,1 -gamma 1.277413,1 -qexp -nthread 8 -gres 10 -expval -expdist"
-${fbin}  "${didb}" -fin "$fin" -qmap -maxsampw 115 -rho 0.359788,1 -eta 0.788613,1 -gamma 1.277413,1 -qexp -nthread 16 -gres 8 -expval -expdist
+${fbin}  "${didb}" -fin "$fin" -qmap -maxsampw 115 -rho 0.359788,1 -eta 0.788613,1 -gamma 1.277413,1 -qexp -nthread 8 -gres 10 -expval -expdist
 
 popd
 echo -e "\n`date` Demo 3 complete.\n\n"

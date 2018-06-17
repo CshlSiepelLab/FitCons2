@@ -6,22 +6,22 @@ echo -e "\n\n`date`\tRequires approximately 10GB of storage space and downloads 
 db="."; db=`readlink -f "${db}"`
 echo -e "\n`date`\tConfiguration base directory:\n\t\t${db}\n"
 echo -e "\n`date`\t Configuring ./bin "
-pushd bin
+pushd bin >> /dev/null
 ./configure.sh
-popd
+popd >> /dev/null
 
-echo -e "\n\n`date`\t Configuring ./Insight2 (see ./Insight2/configure.sh.log) "
+echo -e "\n\n`date`\t Configuring ./Insight2 (about 2 mins, see ./Insight2/configure.sh.log) "
 pushd ./Insight2 >> /dev/null
 ( ./configure.sh 2>&1 ) >> ./configure.sh.log
 popd >> /dev/null
 
-echo -e "\n\n`date`\t Configuring ./covtree  (see ./covtree/configure.sh.log). "
+echo -e "\n\n`date`\t Configuring ./covtree  (about 2 mins, see ./covtree/configure.sh.log). "
 pushd ./covtree >> /dev/null
 (./configure.sh 2>&1 ) >> ./configure.sh.log
 popd >> /dev/null
 
 
-echo -e "\n\n`date`\t Configuration Complete."
+echo -e "\n\n`date`\t Configuration Complete.\n\n"
 echo -e "\t To run Insight2 demos\n\t\t cd ./Insight2/tests\n\t\t./runtests.sh\n\n"
 echo -e "\t To run covtree  demos\n\t\t cd ./covtree/tests\n\t\t./runtest1.sh\n\t\truntest2.sh\n\n"
 
