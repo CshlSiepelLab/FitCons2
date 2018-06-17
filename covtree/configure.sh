@@ -56,6 +56,7 @@ echo " "
 # fetching DB
 echo "`date` Fetching covtree master database. Compressed archive requires approximately 2.5GB."
 
+ddb="./db"; mkdir -p "${ddb}"; ddb=`readlink -f "${ddb}"`
 fdb="covtreeDB.full.tar"
 furl='http://nextgen.cshl.edu/~bgulko/research/covtree/db/FitCons2/3-full/covtreeDB.full.tar'
 

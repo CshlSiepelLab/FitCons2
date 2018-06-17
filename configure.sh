@@ -1,6 +1,7 @@
 #!/bin/bash
 
 echo -e "\n\n`date` FitCons2 Master configuration file, configures top level bin dire, then Insight2 then covtree."
+echo -e "\n\n`date`\tRequires approximately 10GB of storage space and downloads but does not expand covtree db."
 
 db="."; db=`readlink -f "${db}"`
 echo -e "\n`date`\tConfiguration base directory:\n\t\t${db}\n"
@@ -9,15 +10,15 @@ pushd bin
 ./configure.sh
 popd
 
-echo -e "\n\n`date`\t Configuring ./Insight2 "
-pushd ./Insight2
-./configure.sh
-popd
+echo -e "\n\n`date`\t Configuring ./Insight2 (see ./Insight2/configure.sh.log) "
+pushd ./Insight2 >> /dev/null
+( ./configure.sh 2>&1 ) >> ./configure.sh.log
+popd >> /dev/null
 
-echo -e "\n\n`date`\t Configuring ./covtree "
-pushd ./covtree
-./configure.sh
-popd
+echo -e "\n\n`date`\t Configuring ./covtree  (see ./covtree/configure.sh.log). "
+pushd ./covtree >> /dev/null
+(./configure.sh 2>&1 ) >> ./configure.sh.log
+popd >> /dev/null
 
 
 echo -e "\n\n`date`\t Configuration Complete."

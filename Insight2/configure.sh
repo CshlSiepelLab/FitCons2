@@ -53,6 +53,7 @@ echo " "
 # fetchign DB
 echo "`date` Configuring Insight2 database."
 
+ddb="./db"; mkdir -p "${ddb}"; ddb=`readlink -f "${ddb}"`
 fdb="Insight2DB.tar"
 furl='http://nextgen.cshl.edu/~bgulko/research/Insight2/db/FitCons2/Insight2DB.tar'
 
