@@ -13,6 +13,7 @@ source "${dbase}/bin/lib.configure.sh"
 if [[ ! -x "$fiex" ]]; then
   echo -e "\ncovtree requires Insight2, checking Insight2 configuration first...."
   pushd "../Insight2"
+  chmod a+x ./configure.sh
   ./configure.sh
   popd
   if [[ ! -x "$fiex" ]]; then

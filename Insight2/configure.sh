@@ -11,6 +11,7 @@ source "${dbase}/bin/lib.configure.sh"
 if [[ ! -x "${dbase}/bin/unstarch" ]]; then
   echo -e "\n`date` Insight2 requires root configuration, configuring root."
   pushd "../bin"
+  chmod a+x ./configure.sh
   ./configure.sh
   popd
   if [[ ! -x "${dbase}/bin/unstarch" ]]; then

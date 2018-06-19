@@ -7,16 +7,19 @@ db="."; db=`readlink -f "${db}"`
 echo -e "\n`date`\tConfiguration base directory:\n\t\t${db}\n"
 echo -e "\n`date`\t Configuring ./bin "
 pushd bin >> /dev/null
+chmod a+x ./configure.sh
 ./configure.sh
 popd >> /dev/null
 
 echo -e "\n\n`date`\t Configuring ./Insight2 (about 2 mins, see ./Insight2/configure.sh.log) "
 pushd ./Insight2 >> /dev/null
+chmod a+x ./configure.sh
 ( ./configure.sh 2>&1 ) >> ./configure.sh.log
 popd >> /dev/null
 
 echo -e "\n\n`date`\t Configuring ./covtree  (about 2 mins, see ./covtree/configure.sh.log). "
 pushd ./covtree >> /dev/null
+chmod a+x ./configure.sh
 (./configure.sh 2>&1 ) >> ./configure.sh.log
 popd >> /dev/null
 
