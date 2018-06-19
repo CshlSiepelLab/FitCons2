@@ -1,4 +1,8 @@
-## Synopsis
+# Insight2
+
+For an overview on how to easily and automatically download and use the Insight2 & covtree programs, please see the README.md file in the root directory of this repository.
+
+## Details - Insight2
 
 **Insight2** is a high performance implimentation of the [INSIGHT](http://compgen.cshl.edu/INSIGHT) statistical model for estimating number of genomic positions under selective pressure in a collection of intersperced loci. The INSIGHT model can be thought of as a generalization of the [McDonald-Kreitman](https://en.wikipedia.org/wiki/McDonald%E2%80%93Kreitman_test) framework to include non-coding DNA. INSIGHT is sensitive to strong purifying, weak purifying and adaptive selection, using polymorphism data from a collection of individuals in a species and divergence from neighboring outgroup species. Insight2 is approximately 10,000x faster than INSIGHT, but is limited to hg19 genomic positions in humans, with a set of fixed evolutionary parameters derived from the human-chimpanzee common ancestor, a set of polymorphism data from 54 relatively unrelated individuals (subset of [Complete Genomics data](http://www.completegenomics.com/public-data/69-genomes/)), and a fixed set of putative neutral positions consisting of approximately 1/2 of the human genome.
 
