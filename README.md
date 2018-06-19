@@ -85,7 +85,7 @@ The second demo generates a FitCons covariate tree based on 3 cell types (E003-H
    - The exhaustive covaraite splits are found in ./part,
    - The nonmonotonic covariate reording data is in ./sing (entries for the nonmonotonic MeltMap covariate).  
  - Comparitive results from the reference environment be found beased in FitCons2/covtree/tests/2-nonmono/ref
- - The second demo requires approximately  min to run, and after the run the storage requirement is ZZZ GB.
+ - The second demo requires approximately 50 min to run, and after the run the storage requirement is __65__ GB.
 
 ### Full covtree database
 The full epi/genomic property database used to generate the reported FitCons2 results may be found in a compressed form in ```FitCons2D/covtree/db```
@@ -94,5 +94,5 @@ This database requires arouns __2.5GB__ in its compressed form. It can be expand
 $ cd FitCons2/covtree/db
 $ chmod a+x unroll.simple.sh; ./unroll.simple.sh
 ```
-This can require several hours to decompress the ```.starch``` files into ```.bedg``` files. The results occupies around 200GB of storage space.
+This can require two hours to decompress the ```.starch``` files into ```.bedg``` files. The results occupies an additional 90GB of storage space.
 
