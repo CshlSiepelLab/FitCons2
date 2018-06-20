@@ -104,5 +104,5 @@ This can require two hours to decompress the ```.starch``` files into ```.bedg``
     - Repository Base	https://github.com/CshlSiepelLab/FitCons2
     - Repository Detail https://github.com/CshlSiepelLab/FitCons2/tree/master/covtree
     - Repository download link and command: `git clone https://github.com/CshlSiepelLab/FitCons2.git`
- - Pseudocode: see [FitCons2/covtree/docs/Covtree_FunctionalOverview.docx](https://github.com/CshlSiepelLab/FitCons2/blob/master/covtree/docs/Covtree_FunctionalOverview.pdf)
+ - Pseudocode:   see [FitCons2/covtree/docs/Covtree_FunctionalOverview](https://github.com/CshlSiepelLab/FitCons2/blob/master/covtree/docs/Covtree_FunctionalOverview.pdf)
 	
