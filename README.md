@@ -30,7 +30,7 @@ or manually download an extract the current repository via
 
 ```https://github.com/CshlSiepelLab/FitCons2/archive/master.zip```
 
-The repository requires approximately __20MB__ of space, and is configured for Linux (thought Visual Studio 2015 project files and Windows7/10 x64 executables are included as well). There are no external code dependencies. At the top level directory configure (compile or extract prebuilt binaries if compile fails)
+The repository requires approximately __20MB__ of space, and is configured for Linux (thought Visual Studio 2015 project files and Windows7/10 x64 executables are included as well). There are no external code dependencies. At the top-level directory configure (compile or extract prebuilt binaries if compile fails). Compatibility has been verified on Red Hat Enterprise Linux Server releases 6.6 and 6.9, though there are few dependencies so the code is expected to be compatible with RHEL 7.X. Source and executables are also provided for Windows10, but scripts have not been tested under Windows.
 
 ```$ cd FitCons2; chmod a+x ./configure.sh; ./configure.sh```
 
