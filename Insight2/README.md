@@ -13,7 +13,7 @@ Selective pressure can be used as an indicator of the [potential for genomic fun
 ### General	
 
  - Stand Alone Binary: For Linux is available in repository as FitCons2/Insight2/bin/Insight2.bz2
- - Database needed to run Insight2: Download [here](http://compgen.cshl.edu/Insight2/db/FitCons2/Insight2DB.tar), see installation instructions for use.
+ - Database needed to run Insight2: `wget http://compgen.cshl.edu/Insight2/db/FitCons2/Insight2DB.tar`, see installation instructions for use.
  - Demonstration test: in test, see **Demos** section, below, for instructions
 
 ### System Requirements 
@@ -31,7 +31,7 @@ Selective pressure can be used as an indicator of the [potential for genomic fun
 ### Installation Guide:
  - Instructions:
    - Obtain and compile the [bedops](http://bedops.readthedocs.io/en/latest/index.html) package to obtain the [unstarch](http://bedops.readthedocs.io/en/latest/content/reference/file-management/compression/starch.html) decompression program 
-   - Download [Insight2 database](http://compgen.cshl.edu/Insight2/db/FitCons2/Insight2DB.tar) (about 0.5GB) and expand files using ```unstarch``` and ```gunzip``` (expands to about 3.2GB). The Insight2 database directory (`didb`) will be **`FitCons2/Insight2/Insight2DB`** <br>
+   - Download Insight2 database (about 0.5GB) and expand files using ```unstarch``` and ```gunzip``` (expands to about 3.2GB). The Insight2 database directory (`didb`) will be **`FitCons2/Insight2/Insight2DB`** <br>
 `wget http://compgen.cshl.edu/Insight2/db/FitCons2/Insight2DB.tar`<br>
 `tar -xvf Insight2DB.tar`<br>
 `bunzip2 Insight2DB/monoDB.db.gz`<br>
