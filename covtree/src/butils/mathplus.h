@@ -3,6 +3,7 @@
 #include <vector>
 #include <functional>	// greater template
 #include <algorithm>	// sort
+#include <cmath>
 
 class mathplus {
 public:

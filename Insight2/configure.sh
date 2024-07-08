@@ -79,11 +79,11 @@ else
   fi
   
   echo -e "`date`\t Extracting database elements to ./db ."
-  tar -xvf "$fdb" -C "./db"
+  tar --strip-components=1 -xvf "$fdb" -C "./db"
   echo " "
 
   echo -e "`date`\t Decompressing database elements in ./db ."
-  flist="block.bedg.starch monoDB.db.gz poly.bedg.starch polyn.bedg.starch"
+  flist="block.bedg.starch monoDB.db.bz2 monoDB.chroms.bz2 monoDB.tags.bz2 poly.bedg.starch polyn.bedg.starch"
   for fin in ${flist}; do
     echo -e "`date`\t\t Expanding $fin "
     expandFile "./db/${fin}"

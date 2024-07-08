@@ -105,8 +105,7 @@ main(int argc, char *argv[])
 	double			atime;	// double used to monitor wall-runtime, denominates in CLOCK_TICKS (ala clock() )
 
  	if (!adef.processArgs(argc, argv)) {
-		cerr << "\nINSIGHT2: Error Processing Input args:\n\n";
-		adef.displayHelp(argc, argv); cerr << "\n\nExiting." << endl;
+		adef.displayHelp(argc, argv); 
 		return(-1); }
 	if (adef.printHelp || adef.v > 1 ) { 
 		adef.displayHelp(argc, argv); 

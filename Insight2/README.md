@@ -56,9 +56,6 @@ Selective pressure can be used as an indicator of the [potential for genomic fun
  - Execute Line:<br>`bin/Insight2 -h`
  - Expected Output
  ```
- INSIGHT2: Error Processing Input args:
-
-
 
 Insight2 Version: 0.16e
 
@@ -128,7 +125,6 @@ Parameter initialization:
 
 
 
-Exiting.
 ```
  #### Demo 1 - HG19
  - Execute line
