@@ -34,7 +34,9 @@ Selective pressure can be used as an indicator of the [potential for genomic fun
    - Download Insight2 database (about 0.5GB) and expand files using ```unstarch``` and ```gunzip``` (expands to about 3.2GB). The Insight2 database directory (`didb`) will be **`FitCons2/Insight2/Insight2DB`** <br>
 `wget http://compgen.cshl.edu/Insight2/db/FitCons2/Insight2DB.tar`<br>
 `tar -xvf Insight2DB.tar`<br>
-`bunzip2 Insight2DB/monoDB.db.gz`<br>
+`bunzip2 Insight2DB/monoDB.db.bz2`<br>
+`bunzip2 Insight2DB/monoDB.chroms.bz2`<br>
+`bunzip2 Insight2DB/monoDB.tags.bz2`<br>
 `unstarch Insight2DB/block.bedg.starch > Insight2DB/block.bedg`<br>
 `unstarch Insight2DB/poly.bedg.starch > Insight2DB/poly.bedg`<br>
 `unstarch Insight2DB/polyn.bedg.starch > Insight2DB/polyn.bedg`<br> 
