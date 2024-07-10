@@ -15,7 +15,7 @@ The covtree software is optimized to utilize [Insight2 software](https://github.
 
  - Stand Alone Binary: For Linux is available in repository as [FitCons2/covtree/bin/covtree.bz2](https://github.com/CshlSiepelLab/FitCons2/blob/master/covtree/bin/covtree.bz2)
  - Database needed to run covtree: 
-    - Full database available [here](https://github.com/CshlSiepelLab/FitCons2/blob/master/covtree/bin/covtree.bz2)
+    - Full database available [here](http://compgen.cshl.edu/Insight2/db/FitCons2/covtreeDB.full.tar)
     - Demonstration subsets available via demo scripts in FitCons2/covtree/tests . See top level repository documentation  for instructions.
  - Demonstration test: in test, see **Demos** section, below, for instructions
 
