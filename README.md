@@ -61,7 +61,7 @@ This command places demo results to the ```runtests.sh.log```. The demos are as 
 #### Demo: covtree
 To run the covtree demo,  
 ```
-$ cd FitCons2D/covtree/tests
+$ cd FitCons2/covtree/tests
 $ chmod a+x ./runtest1.sh; (./runtest1.sh 2>&1 ) > runtest1.sh.log
 $ chmod a+x ./runtest2.sh; (./runtest2.sh 2>&1 ) > runtest2.sh.log
 ```
