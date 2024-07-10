@@ -47,7 +47,7 @@ echo -e "\n\t Working directory:\n\t\t${dt1} \n"
 # Get database
 ddb="${dt1}/db"; mkdir -p "${ddb}"
 fdb="${ddb}/covtree-test1-DB.tar"
-surl='http://compgen.cshl.edu/~bgulko/research/covtree/db/FitCons2/1-test1-simple/covtree-test1-DB.tar'
+surl='http://compgen.cshl.edu/Insight2/db/FitCons2/covtree-test1-DB.tar'
 if [[ -s "$fdb" ]]; then
   echo -e "`date` Found database archive $fdb . "
 else
@@ -96,8 +96,7 @@ fi
 # Get reference results
 dref="${dt1}/ref"; mkdir -p "${dref}"
 fref="${dref}/covtree-test1-ref.tar"
-#surl='http://nextgen.cshl.edu/~bgulko/research/covtree/db/FitCons2/1-test1-simple/1-test1-simple-db.tar'
-surl='http://compgen.cshl.edu/~bgulko/research/covtree/db/FitCons2/1-test1-simple/covtree-test1-ref.tar'
+surl='http://compgen.cshl.edu/Insight2/db/FitCons2/covtree-test1-ref.tar'
 if [[ -s "$fref" ]]; then
   echo -e "`date` Found reference archive $fref . "
 else
